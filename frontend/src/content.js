@@ -7,146 +7,164 @@ export const navLinks = [
 ];
 
 export const heroContent = {
-  eyebrow: 'Consulenza e servizi digitali a 360°',
-  title: 'Trasformiamo il tuo business con soluzioni digitali su misura',
+  eyebrow: 'Gli strumenti',
+  title: "L'idea",
   description:
-    'Dal design alla sicurezza informatica, passando per infrastrutture cloud e formazione del personale: accompagniamo le PMI verso la piena maturità digitale.',
+    "Punto-e nasce dall'unione di due comprovate professionalità nell'ambito dell'assistenza tecnica. Cristian Carini e Roberto Fornasari vantano un'esperienza di oltre 10 anni rispettivamente nei settori di assistenza per piccoli e grandi elettrodomestici.",
   ctaPrimary: 'Parla con noi',
-  ctaSecondary: 'Scopri i nostri servizi',
+  ctaSecondary: 'Scopri il servizio',
   highlights: [
-    { label: 'Team multidisciplinare', value: '40+' },
-    { label: 'Clienti fidelizzati', value: '120+' },
-    { label: 'Anni di esperienza', value: '15' }
+    { label: 'Esperienza nel settore', value: '10+' },
+    { label: 'Professionisti dedicati', value: '2' },
+    { label: 'Anni di fiducia sul territorio', value: '2000s' }
   ]
 };
 
 export const stats = [
-  { value: '97%', label: 'Clienti soddisfatti', caption: 'Sondaggi post-progetto 2024' },
-  { value: '210k', label: 'Ore di sviluppo', caption: 'Applicazioni mission critical' },
-  { value: '12', label: 'Settori verticali', caption: 'Dalla sanità al manifatturiero' }
+  {
+    value: '2 linee',
+    label: 'Centralino potenziato',
+    caption: 'Due linee telefoniche dedicate e una linea fax'
+  },
+  {
+    value: '100 mq',
+    label: 'Area espositiva',
+    caption: 'Ricambi al dettaglio sempre disponibili'
+  },
+  {
+    value: '200 mq',
+    label: 'Laboratorio e magazzino',
+    caption: 'Supportati da 2 furgoni per l’assistenza a domicilio'
+  }
 ];
 
 export const aboutContent = {
-  title: 'Un unico partner per innovazione, sicurezza e risultati misurabili',
+  title: "L'efficienza del servizio",
   description:
-    'Punto-E integra strategia, tecnologie e formazione per accelerare la crescita delle aziende italiane. Ogni progetto nasce da una consulenza personalizzata, prosegue con un piano operativo chiaro e si conclude solo quando i risultati sono tangibili.',
+    "L’efficienza del servizio viene garantita dal potenziamento delle infrastrutture della nuova sede operativa. Ogni dettaglio è stato pensato per offrire risposte rapide, ricambi immediati e un’assistenza puntuale, dal front office fino al post intervento.",
   highlights: [
-    'Analisi gap digitale e roadmap di trasformazione',
-    'Team certificato su Microsoft, AWS, Cisco, Fortinet',
-    'Supporto managed 24/7 e transition plan completo'
+    'Centralino con due linee telefoniche dedicate e una linea fax',
+    'Oltre 100 mq di area espositiva e ricambi al dettaglio',
+    'Oltre 200 mq di laboratorio tecnico e magazzino',
+    'Due furgoni per l’assistenza a domicilio su tutto il territorio'
   ]
 };
 
 export const services = [
   {
-    title: 'Strategia & Design',
+    title: 'Il Servizio',
     description:
-      'Workshop di co-design, UX/UI, brand identity e digital marketing integrato per lanciare prodotti e servizi digitali memorabili.'
+      "Grazie all’esperienza decennale, Punto-e offre un servizio di assistenza tecnica completo per grandi e piccoli elettrodomestici. Attenta ai rapidi cambiamenti tecnologici, soddisfa ogni richiesta con passione e professionalità, garantendo la reperibilità immediata dei ricambi."
   },
   {
-    title: 'Sviluppo Software',
+    title: 'Assistenza grandi elettrodomestici',
     description:
-      'Applicazioni web, mobile e piattaforme cloud-native con pipeline DevOps e codebase scalabile e manutenibile.'
+      'Diagnostica e riparazioni su frigoriferi, lavatrici, asciugatrici e forni con ricambi originali o compatibili certificati.'
   },
   {
-    title: 'Cybersecurity & Compliance',
+    title: 'Assistenza piccoli elettrodomestici',
     description:
-      'Assessment, penetration test, SOC, gestione incidenti e adeguamento a normative (GDPR, ISO 27001, NIS2).'
+      'Interventi su aspirapolvere, robot da cucina, ferri da stiro e apparecchi per la casa con soluzioni rapide e garantite.'
   },
   {
-    title: 'ICT & Cloud Infrastructure',
+    title: 'Consulenza tecnica',
     description:
-      'Migrazione e gestione cloud, networking avanzato, system integration e modern workplace per team ibridi.'
+      'Verifica dello stato degli impianti, consigli su manutenzioni preventive e supporto nella scelta di nuovi dispositivi.'
   },
   {
-    title: 'Formazione & Change Management',
+    title: 'Ricambi e accessori',
     description:
-      'Academy su cybersecurity, tool digitali e cultura Agile per rendere autonome le persone e sostenibile l’innovazione.'
+      'Ampia disponibilità di ricambi in pronta consegna con gestione ordini su richiesta e supporto dedicato.'
   },
   {
-    title: 'Servizi Gestiti',
+    title: 'Assistenza a domicilio',
     description:
-      'Monitoring H24, help desk multicanale, gestione patching e SLA garantiti con reportistica trasparente.'
+      'Due furgoni attrezzati per interventi rapidi direttamente presso abitazioni o sedi aziendali, con pianificazione flessibile.'
   }
 ];
 
 export const processSteps = [
   {
-    title: 'Analisi & Priorità',
-    copy: 'Audit tecnico e workshop con stakeholder per mappare opportunità, rischi e ROI.'
+    title: 'Accoglienza e diagnosi',
+    copy:
+      'Gestione delle chiamate tramite centralino dedicato e prima valutazione per programmare l’intervento più efficace.'
   },
   {
-    title: 'Prototipo Rapido',
-    copy: 'Proof of concept e demo interattive per validare direzione e metriche di successo.'
+    title: 'Preparazione intervento',
+    copy:
+      'Ricambi verificati in tempo reale dall’area espositiva e dal magazzino per ridurre tempi di fermo e seconde uscite.'
   },
   {
-    title: 'Sviluppo Iterativo',
-    copy: 'Sprint Agile, QA integrato e release frequenti con piena visibilità su progresso e budget.'
+    title: 'Intervento tecnico',
+    copy:
+      'Tecnici specializzati operano in laboratorio o presso il domicilio con attrezzature professionali e procedure certificate.'
   },
   {
-    title: 'Go-live Protetto',
-    copy: 'Piani di rollout, hardening sicurezza, formazione utenti e documentazione operativa.'
+    title: 'Test e collaudo',
+    copy:
+      'Verifica finale del corretto funzionamento, aggiornamento cliente e suggerimenti per prolungare la vita dell’elettrodomestico.'
   },
   {
-    title: 'Supporto Continuo',
-    copy: 'Monitoraggio proattivo, ottimizzazioni e advisory per mantenere il vantaggio competitivo.'
+    title: 'Supporto post intervento',
+    copy:
+      'Assistenza continuativa, reperibilità pezzi di ricambio aggiuntivi e consulenza per eventuali nuove esigenze.'
   }
 ];
 
 export const projects = [
   {
-    title: 'Digital Twin per Smart Factory',
+    title: 'Laboratorio multi-brand',
     description:
-      'Implementazione di un digital twin per una realtà manifatturiera: monitoraggio real-time, manutenzione predittiva e dashboard personalizzate.',
-    tags: ['IoT', 'Cloud Azure', 'Analytics']
+      'Gestione completa di riparazioni per marchi differenti con tracciamento ricambi e storicizzazione degli interventi.',
+    tags: ['Riparazioni', 'Ricambi', 'Laboratorio']
   },
   {
-    title: 'Portale Sanitario Sicuro',
+    title: 'Flotta assistenza a domicilio',
     description:
-      'Portale paziente integrato con telemedicina, autenticazione forte e piena conformità GDPR/NIS2.',
-    tags: ['Healthcare', 'Cybersecurity', 'DevSecOps']
+      'Ottimizzazione delle uscite dei furgoni con pianificazione geografica e magazzino mobile per interventi rapidissimi.',
+    tags: ['On-site', 'Logistica', 'Efficienza']
   },
   {
-    title: 'E-commerce B2B modulare',
+    title: 'Sportello ricambi al dettaglio',
     description:
-      'Piattaforma headless con catalogo personalizzato, pricing dinamico e automazioni marketing.',
-    tags: ['Headless CMS', 'Composable', 'Automation']
+      'Area espositiva dedicata al pubblico con consulenza immediata e ordini su misura per richieste particolari.',
+    tags: ['Retail', 'Customer care', 'Ricambi']
   }
 ];
 
 export const testimonials = [
   {
     quote:
-      'Punto-E ha preso in carico l’intero percorso di modernizzazione, garantendo stabilità e sicurezza senza rallentare il business.',
-    author: 'Chiara Lombardi',
-    role: 'COO, Meditech Group'
+      'Professionalità e rapidità: in un unico intervento hanno risolto il guasto e fornito consigli utili per la manutenzione.',
+    author: 'Marta Rinaldi',
+    role: 'Piacenza'
   },
   {
     quote:
-      'Il loro approccio consulenziale ha permesso di scegliere le metriche corrette e scalare i servizi digitali su tre Paesi in pochi mesi.',
-    author: 'Francesco Rinaldi',
-    role: 'Head of Digital, Ferralux'
+      'Ricambi disponibili subito e tecnici preparati. Servizio impeccabile dalla chiamata al collaudo.',
+    author: 'Gianni Ferri',
+    role: 'Fiorenzuola d’Arda'
   },
   {
     quote:
-      'Un partner affidabile e proattivo: supporto 24/7, procedure chiare e un team che parla il linguaggio dei nostri clienti.',
+      'Assistenza puntuale e cortese, hanno gestito più elettrodomestici coordinando ogni passaggio con grande attenzione.',
     author: 'Laura Conti',
-    role: 'CIO, RetailHub'
+    role: 'Castel San Giovanni'
   }
 ];
 
 export const partners = [
-  { name: 'Microsoft Partner', logo: '/assets/logos/microsoft.svg' },
-  { name: 'AWS Select', logo: '/assets/logos/aws.svg' },
-  { name: 'Cisco Partner', logo: '/assets/logos/cisco.svg' },
-  { name: 'Fortinet', logo: '/assets/logos/fortinet.svg' },
-  { name: 'Atlassian', logo: '/assets/logos/atlassian.svg' }
+  { name: 'Whirlpool', logo: '/assets/logos/whirlpool.svg' },
+  { name: 'Electrolux', logo: '/assets/logos/electrolux.svg' },
+  { name: 'Bosch', logo: '/assets/logos/bosch.svg' },
+  { name: 'Hotpoint', logo: '/assets/logos/hotpoint.svg' },
+  { name: 'DeLonghi', logo: '/assets/logos/delonghi.svg' }
 ];
 
 export const contactChannels = [
   {
-    label: 'Parla con un consulente',
-    value: '+39 02 1234 5678',
+    label: 'Parla con un tecnico',
+    value: '0523.456853',
     type: 'phone'
   },
   {
@@ -155,8 +173,8 @@ export const contactChannels = [
     type: 'email'
   },
   {
-    label: 'Sede centrale',
-    value: 'Via Innovazione 12, 20100 Milano',
+    label: 'Sede operativa',
+    value: 'Via Innovazione 12, 29100 Piacenza',
     type: 'address'
   }
 ];

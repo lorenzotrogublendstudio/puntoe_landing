@@ -9,6 +9,8 @@ import Testimonials from './components/Testimonials/Testimonials';
 import Partners from './components/Partners/Partners';
 import ContactSection from './components/ContactSection/ContactSection';
 import Footer from './components/Footer/Footer';
+import Map from './components/Map/Map';
+import Gallery from './components/Gallery/Gallery.jsx';
 
 import {
   navLinks,
@@ -34,9 +36,11 @@ function App() {
         <Services items={services} />
         <Process steps={processSteps} />
         <Projects items={projects} />
+        <Gallery />
         <Testimonials items={testimonials} />
         <Partners items={partners} />
         <ContactSection channels={contactChannels} />
+        <Map />
       </main>
       <Footer navLinks={navLinks} />
     </>

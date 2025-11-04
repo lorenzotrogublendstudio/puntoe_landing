@@ -1,0 +1,79 @@
+/* Palette fissata su #d71920 */
+:root {
+  --color-primary: #d71920 !important;
+  --color-primary-dark: #b01218 !important;
+  --color-accent: #d71920 !important;
+  --color-border: rgba(215, 25, 32, 0.30) !important;
+}
+
+/* Card rosse + testo bianco */
+.pe-services__card,
+.pe-projects__card,
+.pe-testimonials__card,
+.pe-about__list,
+.pe-process__item,
+.pe-contact__channels li,
+.pe-hero__highlights,
+.pe-partners__inner,
+.pe-stats__inner,         /* se preferisci lascia bianco, rimuovi questa riga */
+.pe-contact__card {       /* la card dei contatti diventa rossa uniforme */
+  background: #d71920 !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  color: #ffffff !important;
+}
+
+/* Testi dentro le card → bianco */
+.pe-services__card h3,
+.pe-services__card p,
+.pe-projects__card h3,
+.pe-projects__card p,
+.pe-testimonials__quote,
+.pe-testimonials__author span,
+.pe-about__list li,
+.pe-process__item h3,
+.pe-process__item p,
+.pe-partners__inner p,
+.pe-hero__highlight-value,
+.pe-contact__channels strong {
+  color: #ffffff !important;
+}
+
+/* Sottotitoli/label leggermente attenuati per contrasto */
+.pe-hero__highlight-label,
+.pe-contact__channels span,
+.pe-testimonials__author span:last-child {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Badge/timeline su fondo rosso */
+.pe-process__badge {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+/* Bullet list About su rosso */
+.pe-about__list li::before {
+  background: #ffffff !important;
+}
+
+/* Tag nei progetti su rosso */
+.pe-projects__tags span {
+  background: rgba(255, 255, 255, 0.24) !important;
+  color: #ffffff !important;
+}
+
+/* Bottoni: primario già rosso, ghost/light coerenti */
+.pe-btn--ghost {
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  color: #ffffff !important;
+}
+.pe-btn--light {
+  background: #ffffff !important;
+  color: #d71920 !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Menu mobile overlay leggermente rosso */
+.pe-header__overlay {
+  background: rgba(215, 25, 32, 0.15) !important;
+}

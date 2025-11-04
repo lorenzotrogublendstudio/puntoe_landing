@@ -1,0 +1,37 @@
+/* Compact section spacing across the site */
+:root {
+  --space-section: clamp(2.5rem, 6vw, 4rem);
+  --space-section-h: clamp(1.25rem, 4.5vw, 4.5rem);
+}
+
+/* Section headings */
+.pe-section-heading {
+  padding: var(--space-section) var(--space-section-h) 0.5rem !important;
+}
+.pe-section-heading h2 {
+  margin-bottom: clamp(0.6rem, 2vw, 1rem) !important;
+}
+
+/* Core sections */
+.pe-about,
+.pe-services,
+.pe-process,
+.pe-projects,
+.pe-testimonials,
+.pe-contact,
+.pe-partners {
+  padding: var(--space-section) var(--space-section-h) !important;
+}
+
+/* Hero: keep presence, reduce bottom */
+.pe-hero {
+  padding: clamp(5rem, 10vw, 8rem) var(--space-section-h) 3rem !important;
+}
+
+/* Stats strip: less bottom spacing */
+.pe-stats {
+  padding: 0 var(--space-section-h) calc(var(--space-section) - 0.5rem) !important;
+}
+
+/* Trim extra bottoms inside grids */
+.pe-projects__grid { margin-bottom: 1rem !important; }

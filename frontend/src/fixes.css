@@ -1,0 +1,26 @@
+/* 1) Hero: rendi il ghost CTA leggibile su fondo chiaro */
+.pe-hero .pe-btn--ghost {
+  color: #d71920 !important;
+  border: 1.5px solid rgba(215, 25, 32, 0.6) !important;
+  background: transparent !important;
+  font-weight: 600;
+}
+.pe-hero .pe-btn--ghost:hover,
+.pe-hero .pe-btn--ghost:focus-visible {
+  border-color: #d71920 !important;
+  background: rgba(215, 25, 32, 0.08) !important;
+  outline: none;
+}
+
+/* 2) Stats strip: testi bianchi su card rossa */
+.pe-stats__inner {
+  background: #d71920 !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+.pe-stats__item h3,
+.pe-stats__item p {
+  color: #ffffff !important;
+}
+.pe-stats__item span {
+  color: rgba(255, 255, 255, 0.85) !important;
+}

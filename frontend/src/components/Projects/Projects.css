@@ -51,3 +51,20 @@
   display: inline-flex;
   margin: 0 auto;
 }
+
+/* Centra la CTA "Richiedi la tua consulenza" */
+.pe-projects .pe-projects__cta.pe-btn {
+  display: block !important;      /* supera .pe-btn { display: inline-flex } */
+  width: fit-content;             /* la larghezza segue il contenuto */
+  margin: 1rem auto 0 !important; /* centra orizzontalmente */
+}
+
+/* Fallback per vecchi browser */
+@supports not (width: fit-content) {
+  .pe-projects .pe-projects__cta.pe-btn {
+    display: table !important;
+    margin: 1rem auto 0 !important;
+  }
+}
+
+#root .pe-projects .pe-projects__cta.pe-btn { display: block !important; margin: 1rem auto 0 !important; }
