@@ -1,0 +1,54 @@
+.pe-contact {
+  padding: clamp(4rem, 10vw, 6.5rem) clamp(1.5rem, 5vw, 6rem);
+}
+
+.pe-contact__card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: linear-gradient(130deg, rgba(59, 130, 246, 0.25), rgba(17, 28, 52, 0.9));
+  border-radius: 26px;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  padding: clamp(2.2rem, 6vw, 3rem);
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 6vw, 3rem);
+}
+
+.pe-contact__copy h2 {
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+
+.pe-contact__channels {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.pe-contact__channels li {
+  background: rgba(7, 11, 22, 0.6);
+  border-radius: 18px;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.pe-contact__channels span {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(248, 250, 252, 0.65);
+}
+
+.pe-contact__channels strong {
+  font-size: 1.15rem;
+  color: var(--color-text);
+}
+
+@media (max-width: 900px) {
+  .pe-contact__card {
+    grid-template-columns: 1fr;
+  }
+}

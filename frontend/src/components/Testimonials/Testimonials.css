@@ -1,0 +1,54 @@
+.pe-testimonials {
+  padding: clamp(4rem, 10vw, 6.5rem) clamp(1.5rem, 5vw, 6rem);
+  background: var(--color-bg-alt);
+}
+
+.pe-testimonials__card {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 26px;
+  background: linear-gradient(120deg, rgba(17, 28, 52, 0.9), rgba(17, 28, 52, 0.55));
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow: 0 24px 50px rgba(5, 10, 30, 0.4);
+  display: grid;
+  gap: 1.4rem;
+}
+
+.pe-testimonials__quote {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: var(--color-text);
+}
+
+.pe-testimonials__author {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.pe-testimonials__author span:last-child {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.pe-testimonials__controls {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.pe-testimonials__controls button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(148, 163, 184, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.pe-testimonials__controls button.is-active {
+  background: var(--color-primary);
+  transform: scale(1.3);
+}

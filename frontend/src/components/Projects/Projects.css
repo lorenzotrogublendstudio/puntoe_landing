@@ -1,0 +1,43 @@
+.pe-projects {
+  padding: clamp(4rem, 10vw, 6.5rem) clamp(1.5rem, 5vw, 6rem);
+}
+
+.pe-projects__grid {
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto 2.5rem;
+}
+
+.pe-projects__card {
+  padding: 2rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  display: grid;
+  gap: 1rem;
+}
+
+.pe-projects__card h3 {
+  font-size: 1.4rem;
+}
+
+.pe-projects__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pe-projects__tags span {
+  padding: 0.35rem 0.75rem;
+  background: rgba(59, 130, 246, 0.18);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+}
+
+.pe-projects__cta {
+  display: inline-flex;
+  margin: 0 auto;
+}

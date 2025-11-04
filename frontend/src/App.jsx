@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './components/header/header';
+import Hero from './components/Hero/Hero';
+import StatsStrip from './components/StatsStrip/StatsStrip';
+import About from './components/About/About';
+import Services from './components/Services/Services';
+import Process from './components/Process/Process';
+import Projects from './components/Projects/Projects.jsx';
+import Testimonials from './components/Testimonials/Testimonials';
+import Partners from './components/Partners/Partners';
+import ContactSection from './components/ContactSection/ContactSection';
+import Footer from './components/Footer/Footer';
+
+import {
+  navLinks,
+  heroContent,
+  stats,
+  aboutContent,
+  services,
+  processSteps,
+  projects,
+  testimonials,
+  partners,
+  contactChannels
+} from './content';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header navLinks={navLinks} />
+      <main>
+        <Hero content={heroContent} />
+        <StatsStrip stats={stats} />
+        <About content={aboutContent} />
+        <Services items={services} />
+        <Process steps={processSteps} />
+        <Projects items={projects} />
+        <Testimonials items={testimonials} />
+        <Partners items={partners} />
+        <ContactSection channels={contactChannels} />
+      </main>
+      <Footer navLinks={navLinks} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
