@@ -4,15 +4,15 @@
 
 .pe-stats__inner {
   max-width: 1100px;
-  margin: 0 auto;
-  background: var(--color-surface-alt);
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  backdrop-filter: blur(16px);
-  border-radius: 18px;
+  margin: 50px auto;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 22px;
   padding: clamp(1.8rem, 4vw, 2.8rem);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
+  box-shadow: var(--shadow-card);
 }
 
 .pe-stats__item {
@@ -22,11 +22,12 @@
 .pe-stats__item h3 {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   margin-bottom: 0.5rem;
+  color: var(--color-primary);
 }
 
 .pe-stats__item p {
   color: var(--color-text);
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0.25rem;
 }
 

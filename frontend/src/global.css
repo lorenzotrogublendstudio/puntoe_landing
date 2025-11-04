@@ -2,18 +2,19 @@
 
 :root {
   --font-primary: 'Inter', 'Segoe UI', sans-serif;
-  --color-bg: #070b16;
-  --color-bg-alt: #0f172a;
-  --color-surface: #111c34;
-  --color-surface-alt: rgba(255, 255, 255, 0.04);
-  --color-primary: #3b82f6;
-  --color-primary-dark: #1d4ed8;
-  --color-accent: #f97316;
-  --color-text: #f8fafc;
-  --color-text-muted: rgba(248, 250, 252, 0.72);
-  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.5), transparent 55%),
-    radial-gradient(circle at 80% 40%, rgba(249, 115, 22, 0.4), transparent 60%);
-  --shadow-card: 0 20px 45px rgba(5, 10, 30, 0.35);
+  --color-bg: #ffffff;
+  --color-bg-alt: #fff5f5;
+  --color-surface: #ffecec;
+  --color-surface-alt: rgba(215, 25, 32, 0.08);
+  --color-primary: #d71920;
+  --color-primary-dark: #a31217;
+  --color-accent: #f97054;
+  --color-text: #171717;
+  --color-text-muted: rgba(23, 23, 23, 0.68);
+  --color-border: rgba(215, 25, 32, 0.18);
+  --shadow-card: 0 22px 45px rgba(215, 25, 32, 0.1);
+  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(215, 25, 32, 0.12), transparent 55%),
+    radial-gradient(circle at 75% 30%, rgba(249, 112, 84, 0.18), transparent 60%);
 }
 
 *,
@@ -24,7 +25,7 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -66,15 +67,15 @@ a {
   border-radius: 999px;
   padding: 0.85rem 1.6rem;
   font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.25s ease, color 0.25s ease;
   cursor: pointer;
   border: none;
 }
 
 .pe-btn--primary {
   background: var(--color-primary);
-  color: #0b1020;
-  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.35);
+  color: #ffffff;
+  box-shadow: 0 16px 40px rgba(215, 25, 32, 0.28);
 }
 
 .pe-btn--primary:hover {
@@ -83,24 +84,27 @@ a {
 }
 
 .pe-btn--ghost {
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
   background: transparent;
 }
 
 .pe-btn--ghost:hover {
-  border-color: rgba(148, 163, 184, 0.6);
+  border-color: rgba(215, 25, 32, 0.32);
+  color: var(--color-primary-dark);
   transform: translateY(-2px);
 }
 
 .pe-btn--light {
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--color-text);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--color-primary);
+  border: 1px solid rgba(215, 25, 32, 0.16);
+  box-shadow: 0 12px 30px rgba(215, 25, 32, 0.12);
 }
 
 .pe-btn--light:hover {
-  background: rgba(255, 255, 255, 0.22);
+  background: #ffffff;
+  color: var(--color-primary-dark);
 }
 
 .pe-section-heading {
@@ -109,7 +113,7 @@ a {
 }
 
 .pe-section-heading p {
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-primary);
@@ -119,4 +123,62 @@ a {
 .pe-section-heading h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: clamp(1rem, 3vw, 1.8rem);
+  color: var(--color-text);
+}
+
+.pe-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.pe-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pe-animate .pe-animate-child {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.pe-animate.is-visible .pe-animate-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pe-animate.is-visible .pe-animate-child:nth-child(1) {
+  transition-delay: 0.08s;
+}
+
+.pe-animate.is-visible .pe-animate-child:nth-child(2) {
+  transition-delay: 0.16s;
+}
+
+.pe-animate.is-visible .pe-animate-child:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+.pe-animate.is-visible .pe-animate-child:nth-child(4) {
+  transition-delay: 0.32s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .pe-animate,
+  .pe-animate .pe-animate-child {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

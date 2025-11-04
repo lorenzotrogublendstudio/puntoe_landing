@@ -1,22 +1,41 @@
 .pe-contact {
   padding: clamp(4rem, 10vw, 6.5rem) clamp(1.5rem, 5vw, 6rem);
+  background: var(--color-bg);
 }
 
 .pe-contact__card {
   max-width: 1100px;
   margin: 0 auto;
-  background: linear-gradient(130deg, rgba(59, 130, 246, 0.25), rgba(17, 28, 52, 0.9));
+  background: linear-gradient(135deg, #d71920 0%, #ffdee0 100%);
   border-radius: 26px;
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(215, 25, 32, 0.35);
   padding: clamp(2.2rem, 6vw, 3rem);
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
   gap: clamp(2rem, 6vw, 3rem);
+  box-shadow: 0 28px 60px rgba(215, 25, 32, 0.22);
+}
+
+.pe-contact__copy {
+  color: #ffffff;
+}
+
+.pe-contact__copy p:first-child {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .pe-contact__copy h2 {
   font-size: clamp(2rem, 4.5vw, 2.8rem);
   margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.pe-contact__copy p:last-of-type {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.5rem;
 }
 
 .pe-contact__channels {
@@ -28,10 +47,11 @@
 }
 
 .pe-contact__channels li {
-  background: rgba(7, 11, 22, 0.6);
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 18px;
   padding: 1.2rem 1.4rem;
-  border: 1px solid rgba(148, 163, 184, 0.18);
+  border: 1px solid rgba(215, 25, 32, 0.18);
+  box-shadow: var(--shadow-card);
 }
 
 .pe-contact__channels span {
@@ -39,12 +59,13 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(248, 250, 252, 0.65);
+  color: rgba(23, 23, 23, 0.6);
+  font-weight: 600;
 }
 
 .pe-contact__channels strong {
   font-size: 1.15rem;
-  color: var(--color-text);
+  color: var(--color-primary-dark);
 }
 
 @media (max-width: 900px) {

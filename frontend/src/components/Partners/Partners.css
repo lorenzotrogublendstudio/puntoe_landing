@@ -1,25 +1,26 @@
 .pe-partners {
   padding: 3rem clamp(1.5rem, 5vw, 6rem);
+  background: var(--color-bg);
 }
 
 .pe-partners__inner {
-  background: var(--color-surface-alt);
-  border: 1px solid rgba(148, 163, 184, 0.08);
-  backdrop-filter: blur(16px);
-  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 22px;
   max-width: 1000px;
   margin: 0 auto;
   padding: clamp(1.5rem, 4vw, 2.5rem);
   display: grid;
   gap: 1.2rem;
   text-align: center;
+  box-shadow: var(--shadow-card);
 }
 
 .pe-partners__inner p {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 600;
-  color: var(--color-text-muted);
+  color: var(--color-primary);
 }
 
 .pe-partners__logos {
@@ -32,11 +33,12 @@
 .pe-partners__logos img {
   max-width: 100%;
   opacity: 0.75;
-  transition: opacity 0.3s ease;
-  filter: grayscale(80%);
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
 }
 
 .pe-partners__logos img:hover {
   opacity: 1;
+  transform: translateY(-4px);
   filter: grayscale(0%);
 }

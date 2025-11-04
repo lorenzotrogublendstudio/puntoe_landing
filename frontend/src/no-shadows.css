@@ -1,0 +1,44 @@
+/* Kill variable-based shadows everywhere */
+:root { --shadow-card: none !important; }
+
+/* Buttons */
+.pe-btn--primary,
+.pe-btn--primary:hover,
+.pe-btn--light,
+.pe-btn--light:hover {
+  box-shadow: none !important;
+}
+
+/* Header (scrolled state) */
+.pe-header.pe-header--scrolled { box-shadow: none !important; }
+
+/* Hero */
+.pe-hero__highlights { box-shadow: none !important; }
+/* Ensure animated pulse doesn’t reintroduce shadows */
+.pe-hero--ready .pe-hero__actions .pe-btn--primary { box-shadow: none !important; }
+
+/* Stats */
+.pe-stats__inner { box-shadow: none !important; }
+
+/* About */
+.pe-about__list { box-shadow: none !important; }
+
+/* Services */
+.pe-services__card { box-shadow: none !important; }
+
+/* Process */
+.pe-process__item { box-shadow: none !important; }
+
+/* Projects */
+.pe-projects__card,
+.pe-projects__card:hover { box-shadow: none !important; }
+
+/* Testimonials */
+.pe-testimonials__card { box-shadow: none !important; }
+
+/* Partners */
+.pe-partners__inner { box-shadow: none !important; }
+
+/* Contact */
+.pe-contact__card,
+.pe-contact__channels li { box-shadow: none !important; }

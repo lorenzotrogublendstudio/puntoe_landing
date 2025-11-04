@@ -1,5 +1,6 @@
 .pe-projects {
   padding: clamp(4rem, 10vw, 6.5rem) clamp(1.5rem, 5vw, 6rem);
+  background: var(--color-bg);
 }
 
 .pe-projects__grid {
@@ -13,14 +14,22 @@
 .pe-projects__card {
   padding: 2rem;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: #ffffff;
+  border: 1px solid var(--color-border);
   display: grid;
   gap: 1rem;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
 }
 
 .pe-projects__card h3 {
   font-size: 1.4rem;
+  color: var(--color-primary);
+}
+
+.pe-projects__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(215, 25, 32, 0.18);
 }
 
 .pe-projects__tags {
@@ -31,10 +40,11 @@
 
 .pe-projects__tags span {
   padding: 0.35rem 0.75rem;
-  background: rgba(59, 130, 246, 0.18);
+  background: rgba(215, 25, 32, 0.14);
   border-radius: 999px;
   font-size: 0.85rem;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
+  font-weight: 600;
 }
 
 .pe-projects__cta {

@@ -1,10 +1,17 @@
 import './ContactSection.css';
+import useReveal from '../../hooks/useReveal';
 
 function ContactSection({ channels }) {
+  const [ref, isVisible] = useReveal(0.2);
+
   return (
-    <section id="contatti" className="pe-contact">
+    <section
+      id="contatti"
+      ref={ref}
+      className={`pe-contact pe-animate ${isVisible ? 'is-visible' : ''}`}
+    >
       <div className="pe-contact__card">
-        <div className="pe-contact__copy">
+        <div className="pe-contact__copy pe-animate-child" style={{ transitionDelay: '0.12s' }}>
           <p>Pronti ad ascoltarti</p>
           <h2>Pianifichiamo insieme il prossimo passo</h2>
           <p>
@@ -17,8 +24,12 @@ function ContactSection({ channels }) {
         </div>
 
         <ul className="pe-contact__channels">
-          {channels.map((channel) => (
-            <li key={channel.value}>
+          {channels.map((channel, index) => (
+            <li
+              key={channel.value}
+              className="pe-animate-child"
+              style={{ transitionDelay: `${0.12 * (index + 2)}s` }}
+            >
               <span>{channel.label}</span>
               <strong>{channel.value}</strong>
             </li>

@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import './Testimonials.css';
+import useReveal from '../../hooks/useReveal';
 
 function Testimonials({ items }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [ref, isVisible] = useReveal(0.25);
 
   const goTo = (index) => {
     if (index >= 0 && index < items.length) {
@@ -11,13 +13,17 @@ function Testimonials({ items }) {
   };
 
   return (
-    <section id="testimonianze" className="pe-testimonials">
-      <div className="pe-section-heading">
+    <section
+      id="testimonianze"
+      ref={ref}
+      className={`pe-testimonials pe-animate ${isVisible ? 'is-visible' : ''}`}
+    >
+      <div className="pe-section-heading pe-animate-child">
         <p>Clienti</p>
         <h2>Le loro parole valgono più di ogni promessa</h2>
       </div>
 
-      <div className="pe-testimonials__card">
+      <div className="pe-testimonials__card pe-animate-child" style={{ transitionDelay: '0.18s' }}>
         <p className="pe-testimonials__quote">“{items[activeIndex].quote}”</p>
         <div className="pe-testimonials__author">
           <span>{items[activeIndex].author}</span>
@@ -25,7 +31,7 @@ function Testimonials({ items }) {
         </div>
       </div>
 
-      <div className="pe-testimonials__controls">
+      <div className="pe-testimonials__controls pe-animate-child" style={{ transitionDelay: '0.32s' }}>
         {items.map((item, index) => (
           <button
             key={item.author}
