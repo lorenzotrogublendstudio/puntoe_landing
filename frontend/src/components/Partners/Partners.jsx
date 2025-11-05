@@ -31,7 +31,7 @@ function PartnerLogo({ partner, delay }) {
 function Partners({ items }) {
   const [ref, isVisible] = useReveal(0.2);
   const sliderRef = useRef(null);
-  const isMobile = useMediaQuery('(max-width: 768px)');
+  const isMobile = useMediaQuery('(max-width: 768px)');  const isTablet = useMediaQuery('(max-width: 1024px)');  const isPortrait = useMediaQuery('(orientation: portrait)');
 
   const handleScroll = (direction) => {
     if (!sliderRef.current) return;
@@ -45,7 +45,7 @@ function Partners({ items }) {
         currentIndex = i;      
       }    
     });    
-    const delta = isMobile ? 1 : 3;    
+    const delta = (isMobile || (isTablet && isPortrait)) ? 1 : isTablet ? 2 : 3;    
     let targetIndex = currentIndex + delta * direction;    
     if (targetIndex < 0) targetIndex = 0;
     if (targetIndex > cards.length - 1) targetIndex = cards.length - 1;
@@ -94,4 +94,6 @@ function Partners({ items }) {
 }
 
 export default Partners;
+
+
 

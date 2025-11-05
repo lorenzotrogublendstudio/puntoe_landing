@@ -281,3 +281,11 @@
   box-sizing: border-box;
   max-width: 100%;
 }
+/* Ruota il logo in orizzontale su mobile */
+@media (max-width: 768px) {
+  .pe-footer__logo img {
+    transform: rotate(90deg);
+    transform-origin: center;
+    width: clamp(110px, 28vw, 160px);
+  }
+}

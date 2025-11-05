@@ -1,0 +1,67 @@
+/* Tablet landscape: ~768–1180px */
+@media screen and (min-width: 768px) and (max-width: 1180px) and (orientation: landscape) {
+  /* Header */
+  .pe-header { padding: 0.9rem clamp(1rem, 3vw, 2rem); }
+  .pe-header__logo-img { height: clamp(44px, 5vw, 64px); }
+  .pe-header__tagline { font-size: clamp(14px, 1.8vw, 18px); letter-spacing: 0.1em; }
+  .pe-header__phone { padding: 0.7rem 1.15rem; font-size: 0.95rem; }
+
+  /* Hero */
+  .pe-hero { padding: clamp(4.5rem, 7vw, 6rem) clamp(1rem, 3vw, 2rem) 3rem; }
+  .pe-hero__grid { gap: clamp(1.5rem, 3vw, 2rem); max-width: 1000px; }
+  .pe-hero__copy h1 { font-size: clamp(2.2rem, 4.6vw, 3.1rem); }
+  .pe-hero__highlights { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  /* Stats */
+  .pe-stats { padding: 0 clamp(1rem, 3vw, 2rem) clamp(3rem, 6vw, 4rem); }
+  .pe-stats__inner { grid-template-columns: repeat(3, 1fr); max-width: 1000px; }
+
+  /* About */
+  .pe-about { padding: clamp(3rem, 6vw, 4.5rem) clamp(1rem, 3vw, 2rem); }
+  .pe-about__inner { grid-template-columns: 1.2fr 1fr; gap: clamp(1.2rem, 3vw, 1.8rem); }
+
+  /* Services */
+  .pe-services { padding: clamp(3rem, 6vw, 4.5rem) clamp(1rem, 3vw, 2rem); }
+  .pe-services__grid { grid-template-columns: repeat(3, minmax(220px, 1fr)); gap: clamp(1rem, 2.2vw, 1.4rem); }
+
+  /* Process */
+  .pe-process { padding: clamp(3rem, 6vw, 4.5rem) clamp(1rem, 3vw, 2rem); }
+  .pe-process__timeline { max-width: 1000px; gap: 1.2rem; }
+  .pe-process__badge { width: 38px; height: 38px; }
+
+  /* Projects */
+  .pe-projects { padding: clamp(3rem, 6vw, 4.5rem) clamp(1rem, 3vw, 2rem); }
+  .pe-projects__grid { grid-template-columns: repeat(3, minmax(240px, 1fr)); gap: clamp(1rem, 2vw, 1.4rem); max-width: 1000px; }
+
+  /* Testimonials */
+  .pe-testimonials { padding: clamp(3rem, 6vw, 4.5rem) clamp(1rem, 3vw, 2rem); }
+  .pe-testimonials__card { max-width: 900px; padding: clamp(2rem, 4vw, 2.6rem); }
+
+  /* Gallery (finetune landscape) */
+  .pe-gallery-slider { min-height: clamp(60vh, 74vh, 82vh); }
+  .pe-gallery-slider__controls { top: 6px; padding: clamp(0.7rem, 3vw, 1.2rem) clamp(1rem, 4vw, 2rem); }
+  .pe-gallery-slider__arrow { width: clamp(44px, 6vw, 56px); height: clamp(44px, 6vw, 56px); font-size: clamp(1.5rem, 2.2vw, 1.9rem); }
+  .pe-gallery-slider__bottom { padding: clamp(1.6rem, 4vw, 2.6rem) clamp(1.2rem, 4vw, 2.2rem); gap: clamp(1rem, 3vw, 1.6rem); }
+
+  /* Partners (landscape tablet: 2 card per step già impostate, qui misure) */
+  .pe-partners__slider { max-width: min(94vw, 1000px); }
+  .pe-partners__logo { width: clamp(180px, 26vw, 240px); height: clamp(110px, 14vw, 140px); padding: clamp(0.9rem, 1.6vw, 1.2rem); }
+  .pe-partners__logo img { max-height: clamp(70px, 8vw, 100px); }
+  .pe-partners__arrow { width: clamp(44px, 6vw, 56px); height: clamp(44px, 6vw, 56px); font-size: clamp(1.3rem, 2vw, 1.8rem); }
+
+  /* Contact / form */
+  .pe-contact { padding: clamp(3rem, 6vw, 4.5rem) clamp(1rem, 3vw, 2rem); }
+  .pe-contact__layout { grid-template-columns: 1.1fr 1fr; gap: clamp(1.2rem, 3vw, 2rem); }
+  .pe-contact__form-wrapper { padding: clamp(1.4rem, 2.6vw, 1.8rem); }
+  .pe-contact__row { grid-template-columns: repeat(2, 1fr); gap: clamp(0.8rem, 2vw, 1.2rem); }
+  .pe-contact__form input, .pe-contact__form textarea { font-size: 0.95rem; }
+
+  /* Footer (già ottimizzato; qui consolidiamo) */
+  .pe-footer { padding: clamp(2.5rem, 6vw, 3.5rem) clamp(1rem, 4vw, 2rem); }
+  .pe-footer__content { grid-template-columns: auto minmax(0, 1fr); gap: clamp(1rem, 3vw, 1.6rem); align-items: start; }
+  .pe-footer__logo img { width: clamp(76px, 8vw, 96px); transform: none; } /* in landscape rimane orizzontale normale */
+  .pe-footer__image img { width: clamp(90px, 10vw, 120px); }
+  .pe-footer__contacts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(0.8rem, 2vw, 1.2rem); }
+  .pe-footer__contacts div { padding: clamp(0.9rem, 2.2vw, 1.3rem); }
+  .pe-footer__credits { margin-top: clamp(1.2rem, 2.5vw, 1.8rem); }
+}

@@ -6,6 +6,7 @@ import './no-shadows.css';
 import './compact-spacing.css';
 import './brand-red.css';
 import './fixes.css'
+import './tablet-landscape.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -1,6 +1,6 @@
 .pe-map {
   padding: clamp(3rem, 9vw, 5.5rem) clamp(1.5rem, 5vw, 6rem);
-  background: var(--color-bg-alt, #fff5f5);
+  background: var(--color-bg-alt, #f3f3f3);
 }
 
 .pe-map__address {

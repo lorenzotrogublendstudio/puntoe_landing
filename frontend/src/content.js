@@ -35,7 +35,7 @@ export const heroContent = {
   highlights: [
     { label: 'Esperienza nel settore', value: '10+' },
     { label: 'Professionisti dedicati', value: '2' },
-    { label: 'Anni di fiducia sul territorio', value: '2000s' }
+    { label: 'Anni di fiducia sul territorio', value: '20+' }
   ]
 };
 
