@@ -1,23 +1,78 @@
-import './Partners.css';
+import { useRef, useState } from 'react';
 import useReveal from '../../hooks/useReveal';
+import './Partners.css';
+
+function PartnerLogo({ partner, delay }) {
+  const [failed, setFailed] = useState(false);
+
+  return (
+    <figure
+      className={`pe-partners__logo pe-animate-child ${failed ? 'is-fallback' : ''}`}
+      style={{ transitionDelay: `${delay}s` }}
+    >
+      {!failed && (
+        <img
+          src={partner.logo}
+          alt={partner.name}
+          loading="lazy"
+          onError={() => setFailed(true)}
+        />
+      )}
+      {failed && (
+        <span className="pe-partners__fallback" aria-hidden="true">
+          {partner.name}
+        </span>
+      )}
+    </figure>
+  );
+}
 
 function Partners({ items }) {
   const [ref, isVisible] = useReveal(0.2);
+  const sliderRef = useRef(null);
+
+  const handleScroll = (direction) => {
+    if (!sliderRef.current) return;
+    const step = sliderRef.current.offsetWidth * 0.55;
+    sliderRef.current.scrollBy({
+      left: step * direction,
+      behavior: 'smooth'
+    });
+  };
 
   return (
-    <section ref={ref} className={`pe-partners pe-animate ${isVisible ? 'is-visible' : ''}`}>
-      <div className="pe-partners__inner pe-animate-child" style={{ transitionDelay: '0.12s' }}>
-        <p>Partner certificati</p>
-        <div className="pe-partners__logos">
-          {items.map((partner, index) => (
-            <img
-              key={partner.name}
-              src={partner.logo}
-              alt={partner.name}
-              className="pe-animate-child"
-              style={{ transitionDelay: `${0.12 * (index + 2)}s` }}
-            />
-          ))}
+    <section
+      id="partner"
+      ref={ref}
+      className={`pe-partners pe-animate ${isVisible ? 'is-visible' : ''}`}
+    >
+      <div className="pe-partners__wrapper pe-animate-child" style={{ transitionDelay: '0.12s' }}>
+        <h2 className="pe-partners__title">PARTNER CERTIFICATI</h2>
+
+        <div className="pe-partners__slider">
+          <button
+            type="button"
+            className="pe-partners__arrow pe-partners__arrow--prev"
+            onClick={() => handleScroll(-1)}
+            aria-label="Loghi precedenti"
+          >
+            ‹
+          </button>
+
+          <div className="pe-partners__track" ref={sliderRef}>
+            {items.map((partner, index) => (
+              <PartnerLogo key={partner.name} partner={partner} delay={0.12 * (index + 1)} />
+            ))}
+          </div>
+
+          <button
+            type="button"
+            className="pe-partners__arrow pe-partners__arrow--next"
+            onClick={() => handleScroll(1)}
+            aria-label="Loghi successivi"
+          >
+            ›
+          </button>
         </div>
       </div>
     </section>

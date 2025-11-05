@@ -1,3 +1,7 @@
+import boschLogo from './assets/images/bosch_logo.png';
+import siemensLogo from './assets/images/siemens_logo.webp';
+import arieteLogo from './assets/images/ariete_logo.jpg';
+
 export const navLinks = [
   { id: 'servizi', label: 'Servizi' },
   { id: 'metodo', label: 'Metodo' },
@@ -154,11 +158,16 @@ export const testimonials = [
 ];
 
 export const partners = [
-  { name: 'Whirlpool', logo: '/assets/logos/whirlpool.svg' },
-  { name: 'Electrolux', logo: '/assets/logos/electrolux.svg' },
-  { name: 'Bosch', logo: '/assets/logos/bosch.svg' },
-  { name: 'Hotpoint', logo: '/assets/logos/hotpoint.svg' },
-  { name: 'DeLonghi', logo: '/assets/logos/delonghi.svg' }
+  { name: 'Bosch', logo: boschLogo },
+  { name: 'Siemens', logo: siemensLogo },
+  { name: 'Ariete', logo: arieteLogo },
+  { name: 'DeLonghi', logo: 'https://logos-world.net/wp-content/uploads/2020/12/DeLonghi-Logo.png' },
+  { name: 'Imetec', logo: 'https://upload.wikimedia.org/wikipedia/it/8/8e/Imetec_logo.png' },
+  { name: 'Krups', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Krups_Logo.svg/1024px-Krups_Logo.svg.png' },
+  { name: 'Simac', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/36/SIMAC_logo.png' },
+  { name: 'Tefal', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Tefal_logo.svg/1200px-Tefal_logo.svg.png' },
+  { name: 'Kenwood', logo: 'https://download.logo.wine/logo/Kenwood_Corporation/Kenwood_Corporation-Logo.wine.png' },
+  { name: 'Rowenta', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Rowenta_logo.svg/2560px-Rowenta_logo.svg.png' }
 ];
 
 export const contactChannels = [

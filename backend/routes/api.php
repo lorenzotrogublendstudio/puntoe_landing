@@ -4,9 +4,4 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Submission;
 use App\Http\Controllers\SubmissionController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-
+Route::post('/contact', [SubmissionController::class, 'store']);
