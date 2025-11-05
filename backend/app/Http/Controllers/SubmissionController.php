@@ -2,25 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSubmissionRequest;
+use App\Mail\SubmissionNotification;
 use App\Models\Submission;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\SubmissionNotification;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 
 class SubmissionController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
-    public function __invoke(Request $request)
-    {
-        //
-    }
-
     public function store(StoreSubmissionRequest $request): JsonResponse
     {
         $submission = Submission::create([
@@ -30,27 +21,31 @@ class SubmissionController extends Controller
             'phone'      => $request->input('phone'),
             'message'    => $request->input('message'),
             'ip_address' => $request->ip(),
-            'user_agent' => $request->userAgent(),
+            'user_agent' => substr((string) $request->userAgent(), 0, 255),
         ]);
 
-        // TODO: dispatch mail / queue jobs here e.g. SendSubmissionNotification::dispatch($submission);
-        // Destinatario interno (fallback su MAIL_FROM se non configurato diversamente)
-    $recipient = config('mail.contact_recipient') ?? config('mail.from.address');
+        $to = config('mail.contact_recipient', config('mail.from.address'));
+        $cc = array_filter(array_map('trim', explode(',', (string) config('mail.contact_cc'))));
 
         try {
-            Mail::to($recipient)->send(new SubmissionNotification($submission));
+            $mailable = new SubmissionNotification($submission);
 
-            // opzionale: conferma al cliente
-            if (filter_var($submission->email, FILTER_VALIDATE_EMAIL)) {
-                Mail::to($submission->email)->send(new SubmissionNotification($submission));
+            $mailer = Mail::to($to);
+            if ($cc) {
+                $mailer->cc($cc);
             }
-        } catch (\Throwable $e) {
-            Log::error('Errore invio mail submission', [
+
+            // Se usi la coda:
+            // $mailer->queue($mailable);
+            $mailer->send($mailable);
+        } catch (TransportExceptionInterface $e) {
+            Log::error('SMTP transport error', [
                 'submission_id' => $submission->id,
                 'message'       => $e->getMessage(),
             ]);
+
             return response()->json([
-                'message' => 'Richiesta salvata ma impossibile inoltrare la mail di notifica.',
+                'message' => 'Richiesta salvata ma la mail non è stata inoltrata (errore SMTP).',
                 'id'      => $submission->id,
             ], 202);
         }
