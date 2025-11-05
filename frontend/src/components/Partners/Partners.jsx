@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import useMediaQuery from '../../hooks/useMediaQuery';
 import useReveal from '../../hooks/useReveal';
 import './Partners.css';
 
@@ -30,14 +31,27 @@ function PartnerLogo({ partner, delay }) {
 function Partners({ items }) {
   const [ref, isVisible] = useReveal(0.2);
   const sliderRef = useRef(null);
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   const handleScroll = (direction) => {
     if (!sliderRef.current) return;
-    const step = sliderRef.current.offsetWidth * 0.55;
-    sliderRef.current.scrollBy({
-      left: step * direction,
-      behavior: 'smooth'
-    });
+    const track = sliderRef.current;    if (!track) return;    
+    const cards = Array.from(track.children || []);    if (!cards.length) return;    
+    const viewportCenter = track.scrollLeft + track.clientWidth / 2;    let currentIndex = 0;    
+    let minDist = Infinity;    cards.forEach((el, i) => {      const center = el.offsetLeft + el.clientWidth / 2;      
+      const dist = Math.abs(center - viewportCenter);      
+      if (dist < minDist) {        
+        minDist = dist;        
+        currentIndex = i;      
+      }    
+    });    
+    const delta = isMobile ? 1 : 3;    
+    let targetIndex = currentIndex + delta * direction;    
+    if (targetIndex < 0) targetIndex = 0;
+    if (targetIndex > cards.length - 1) targetIndex = cards.length - 1;
+    const target = cards[targetIndex];
+    const targetLeft = target.offsetLeft - (track.clientWidth - target.clientWidth) / 2;
+    track.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
   };
 
   return (
@@ -80,3 +94,4 @@ function Partners({ items }) {
 }
 
 export default Partners;
+

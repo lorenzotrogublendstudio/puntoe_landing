@@ -1,0 +1,45 @@
+*** Begin Patch
+*** Update File: frontend/src/components/Partners/Partners.jsx
+@@
+-  const handleScroll = (direction) => {
+-    if (!sliderRef.current) return;
+-    const step = sliderRef.current.offsetWidth * (isMobile ? 0.8 : 0.55);
+-    sliderRef.current.scrollBy({
+-      left: step * direction,
+-      behavior: 'smooth'
+-    });
+-  };
++  const handleScroll = (direction) => {
++    const track = sliderRef.current;
++    if (!track) return;
++
++    const cards = Array.from(track.children || []);
++    if (!cards.length) return;
++
++    // Centro visibile del track
++    const viewportCenter = track.scrollLeft + track.clientWidth / 2;
++
++    // Trova l'indice della card più vicina al centro
++    let currentIndex = 0;
++    let minDist = Infinity;
++    cards.forEach((el, i) => {
++      const center = el.offsetLeft + el.clientWidth / 2;
++      const dist = Math.abs(center - viewportCenter);
++      if (dist < minDist) {
++        minDist = dist;
++        currentIndex = i;
++      }
++    });
++
++    // Su mobile scorri di 1, su desktop di 3
++    const delta = isMobile ? 1 : 3;
++    let targetIndex = currentIndex + delta * direction;
++    if (targetIndex < 0) targetIndex = 0;
++    if (targetIndex > cards.length - 1) targetIndex = cards.length - 1;
++
++    const target = cards[targetIndex];
++    const targetLeft = target.offsetLeft - (track.clientWidth - target.clientWidth) / 2;
++
++    track.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
++  };
+*** End Patch

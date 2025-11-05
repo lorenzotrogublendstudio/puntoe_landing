@@ -1,6 +1,21 @@
-import boschLogo from './assets/images/bosch_logo.png';
-import siemensLogo from './assets/images/siemens_logo.webp';
-import arieteLogo from './assets/images/ariete_logo.jpg';
+import arieteLogo from './assets/images/SVG/LOGO-ARIETE.svg';
+import bialettiLogo from './assets/images/SVG/LOGO-BIALETTI.svg';
+import boschLogo from './assets/images/SVG/LOGO-BOSCH.svg';
+import braunLogo from './assets/images/SVG/LOGO-BRAUN.svg';
+import candyLogo from './assets/images/SVG/LOGO-CANDY.svg';
+import delonghiLogo from './assets/images/SVG/LOGO-DELONGHI.svg';
+import gaggenauLogo from './assets/images/SVG/LOGO-GAGGENAU.svg';
+import ibernaLogo from './assets/images/SVG/LOGO-IBERNA.svg';
+import imetecLogo from './assets/images/SVG/LOGO-IMETEC.svg';
+import kenwoodLogo from './assets/images/SVG/LOGO-KENWOOD.svg';
+import krupsLogo from './assets/images/SVG/LOGO-KRUPS.svg';
+import moulinexLogo from './assets/images/SVG/LOGO-MOULINEX.svg';
+import neffLogo from './assets/images/SVG/LOGO-NEFF.svg';
+import rowentaLogo from './assets/images/SVG/LOGO-ROWENTA.svg';
+import siemensLogo from './assets/images/SVG/LOGO-SIEMENS.svg';
+import simacLogo from './assets/images/SVG/LOGO-SIMAC.svg';
+import tefalLogo from './assets/images/SVG/LOGO-TEFAL.svg';
+import zerowattLogo from './assets/images/SVG/LOGO-ZEROWATT.svg';
 
 export const navLinks = [
   { id: 'servizi', label: 'Servizi' },
@@ -161,13 +176,21 @@ export const partners = [
   { name: 'Bosch', logo: boschLogo },
   { name: 'Siemens', logo: siemensLogo },
   { name: 'Ariete', logo: arieteLogo },
-  { name: 'DeLonghi', logo: 'https://logos-world.net/wp-content/uploads/2020/12/DeLonghi-Logo.png' },
-  { name: 'Imetec', logo: 'https://upload.wikimedia.org/wikipedia/it/8/8e/Imetec_logo.png' },
-  { name: 'Krups', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Krups_Logo.svg/1024px-Krups_Logo.svg.png' },
-  { name: 'Simac', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/36/SIMAC_logo.png' },
-  { name: 'Tefal', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Tefal_logo.svg/1200px-Tefal_logo.svg.png' },
-  { name: 'Kenwood', logo: 'https://download.logo.wine/logo/Kenwood_Corporation/Kenwood_Corporation-Logo.wine.png' },
-  { name: 'Rowenta', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Rowenta_logo.svg/2560px-Rowenta_logo.svg.png' }
+  { name: 'Bialetti', logo: bialettiLogo },
+  { name: 'Braun', logo: braunLogo },
+  { name: 'Candy', logo: candyLogo },
+  { name: 'DeLonghi', logo: delonghiLogo },
+  { name: 'Gaggenau', logo: gaggenauLogo },
+  { name: 'Iberna', logo: ibernaLogo },
+  { name: 'Imetec', logo: imetecLogo },
+  { name: 'Krups', logo: krupsLogo },
+  { name: 'Moulinex', logo: moulinexLogo },
+  { name: 'Neff', logo: neffLogo },
+  { name: 'Simac', logo: simacLogo },
+  { name: 'Tefal', logo: tefalLogo },
+  { name: 'Kenwood', logo: kenwoodLogo },
+  { name: 'Rowenta', logo: rowentaLogo },
+  { name: 'Zerowatt', logo: zerowattLogo }
 ];
 
 export const contactChannels = [
@@ -178,12 +201,12 @@ export const contactChannels = [
   },
   {
     label: 'Scrivici',
-    value: 'contatto@punto-e.eu',
+    value: 'info@punto-e.eu',
     type: 'email'
   },
   {
     label: 'Sede operativa',
-    value: 'Via Innovazione 12, 29100 Piacenza',
+    value: 'Str. Farnesiana 91/93, 29122 Piacenza PC',
     type: 'address'
   }
 ];

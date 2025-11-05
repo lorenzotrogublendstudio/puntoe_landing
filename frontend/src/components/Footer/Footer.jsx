@@ -1,33 +1,41 @@
 import useReveal from '../../hooks/useReveal';
 import './Footer.css';
-
-function Footer({ navLinks }) {
+import logoUrl from '../../assets/images/puntoe_laterale_logo.jpg';
+import galleryImage from '../../assets/images/puntoe_laterale_destra.jpg';
+function Footer() {
   const year = new Date().getFullYear();
   const [ref, isVisible] = useReveal(0.12);
 
   return (
     <footer ref={ref} className={`pe-footer pe-animate ${isVisible ? 'is-visible' : ''}`}>
-      <div className="pe-footer__top pe-animate-child">
-        <a href="#hero" className="pe-footer__logo">
-          Punto<span>•</span>E
+      <div className="pe-footer__content pe-animate-child">
+        <a href="#hero" className="pe-footer__logo" aria-label="Punto-E home">
+          <img src={logoUrl} alt="Punto-E" />
         </a>
-        <nav>
-          {navLinks.map((link) => (
-            <a key={link.id} href={`#${link.id}`}>
-              {link.label}
-            </a>
-          ))}
-        </nav>
-      </div>
 
-      <div className="pe-footer__bottom pe-animate-child" style={{ transitionDelay: '0.18s' }}>
-        <p>© {year} Punto-E. Tutti i diritti riservati.</p>
-        <div className="pe-footer__policies">
-          <a href="/">Privacy</a>
-          <a href="/">Cookie</a>
-          <a href="/">Termini</a>
+        <div className="pe-footer__image">
+          <img src={galleryImage} alt="Assistenza Punto-E" />
+        </div>
+
+        <div className="pe-footer__contacts">
+          <div>
+            <span>Parla con noi</span>
+            <a href="tel:0523456853">0523.456853</a>
+          </div>
+          <div>
+            <span>Email</span>
+            <a href="mailto:info@punto-e.eu">info@punto-e.eu</a>
+          </div>
+          <div>
+            <span>Sede</span>
+            <p>Str. Farnesiana 91/93, 29122 Piacenza PC</p>
+          </div>
         </div>
       </div>
+
+      <p className="pe-footer__credits pe-animate-child" style={{ transitionDelay: '0.15s' }}>
+        © {year} Punto-E. Tutti i diritti riservati.
+      </p>
     </footer>
   );
 }
