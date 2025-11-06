@@ -2,7 +2,7 @@
     {{-- Header con logo --}}
     @slot('header')
         <div class="header">
-            <img src="https://punto-e.eu/wp-content/uploads/2021/05/logo-punto-e.png" alt="Punto-E">
+            <img src="./../../../../frontend/src/assets/images/logo_puntoe.jpg" alt="Punto-E">
         </div>
     @endslot
 
@@ -35,9 +35,7 @@
         {{ $submission->message }}
     @endcomponent
 
-    @component('mail::button', ['url' => config('app.url') . '/admin/submissions/' . $submission->id])
-        Apri in dashboard
-    @endcomponent
+  
 
     {{-- Subcopy --}}
     @slot('subcopy')

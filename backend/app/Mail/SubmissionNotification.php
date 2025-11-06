@@ -5,6 +5,8 @@ namespace App\Mail;
 use App\Models\Submission;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Content;
+use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
 class SubmissionNotification extends Mailable
@@ -18,16 +20,16 @@ class SubmissionNotification extends Mailable
         $this->submission = $submission;
     }
 
-    public function envelope(): \Illuminate\Mail\Mailables\Envelope
+    public function envelope(): Envelope
     {
-        return new \Illuminate\Mail\Mailables\Envelope(
-            subject: 'Nuova richiesta di contatto Punto‑E'
+        return new Envelope(
+            subject: 'Nuova richiesta di contatto Punto-E'
         );
     }
 
-    public function content(): \Illuminate\Mail\Mailables\Content
+    public function content(): Content
     {
-        return new \Illuminate\Mail\Mailables\Content(
+        return new Content(
             markdown: 'emails.submission_notification'
         );
     }
@@ -37,3 +39,4 @@ class SubmissionNotification extends Mailable
         return [];
     }
 }
+
