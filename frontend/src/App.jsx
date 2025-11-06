@@ -35,7 +35,6 @@ function App() {
         <About content={aboutContent} />
         <Services items={services} />
         <Process steps={processSteps} />
-        <Projects items={projects} />
         <Gallery />
         <Testimonials items={testimonials} />
         <Partners items={partners} />

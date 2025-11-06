@@ -62,9 +62,9 @@ function ContactSection({ channels }) {
       <div className="pe-contact__layout">
         <div className="pe-contact__intro pe-animate-child" style={{ transitionDelay: '0.12s' }}>
           <p className="pe-contact__eyebrow">Pronti ad ascoltarti</p>
-          <h2 className="pe-contact__headline">Pianifichiamo insieme il prossimo passo</h2>
+          <h2 className="pe-contact__headline">Contatta il nostro servizio di assistenza!</h2>
           <p className="pe-contact__copy">
-            Raccontaci il tuo progetto: entro 24 ore ti contatterà un consulente specializzato nel tuo settore.
+            Prenderemo in carico la tua richiesta nel più breve tempo possibile.
           </p>
           <ul className="pe-contact__channels">
             {channels.map((channel) => (

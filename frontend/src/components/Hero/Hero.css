@@ -86,13 +86,7 @@
 }
 
 .pe-hero__highlights {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid var(--color-border);
-  border-radius: 22px;
-  padding: clamp(1.8rem, 5vw, 2.5rem);
-  display: grid;
-  gap: 1.5rem;
-  box-shadow: var(--shadow-card);
+  display: none;
 }
 
 .pe-hero__highlight {
@@ -131,7 +125,77 @@
     grid-template-columns: 1fr;
   }
 
-  .pe-hero__highlights {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
 }
+
+/* Slider partners in hero */
+.pe-hero__slider {
+  position: relative;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--color-border);
+  border-radius: 22px;
+  box-shadow: var(--shadow-card);
+  padding: clamp(1.2rem, 3.5vw, 2rem);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.pe-hero__slide {
+  display: grid;
+  place-items: center;
+  min-height: clamp(180px, 22vw, 260px);
+}
+
+.pe-hero__partner-card {
+  margin: 0;
+  width: 100%;
+  max-width: 420px;
+  height: clamp(140px, 18vw, 200px);
+  border-radius: 18px;
+  border: 1px solid rgba(215, 25, 32, 0.22);
+  background: rgba(215, 25, 32, 0.05);
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.pe-hero__partner-logo {
+  max-width: 100%;
+  max-height: clamp(80px, 10vw, 120px);
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.95;
+}
+
+.pe-hero__partner-name {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.pe-hero__arrow {
+  width: clamp(40px, 8vw, 56px);
+  height: clamp(40px, 8vw, 56px);
+  border-radius: 50%;
+  border: 1px solid rgba(215, 25, 32, 0.45);
+  background: #ffffff;
+  color: #d71920;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+  box-shadow: 0 10px 24px rgba(215, 25, 32, 0.12);
+}
+
+.pe-hero__arrow:hover,
+.pe-hero__arrow:focus-visible {
+  transform: scale(1.08);
+  background: #d71920;
+  color: #fff;
+  outline: none;
+}
+
+.pe-hero__arrow:active { transform: scale(0.94); }

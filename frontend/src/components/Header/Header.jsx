@@ -22,10 +22,10 @@ function Header() {
 
         <a
           className="pe-btn pe-btn--primary pe-header__phone"
-          href="tel:+390523456853"
-          aria-label="Chiama 0523.456853"
+          href="tel:+390523606348"
+          aria-label="Chiama 0523.606348"
         >
-          0523.456853
+          0523.606348
         </a>
       </div>
     </header>

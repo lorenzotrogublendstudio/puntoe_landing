@@ -27,10 +27,10 @@ export const navLinks = [
 
 export const heroContent = {
   eyebrow: 'Gli strumenti',
-  title: "L'idea",
+  title: "Riparazione elettrodomestici a Piacenza",
   description:
-    "Punto-e nasce dall'unione di due comprovate professionalità nell'ambito dell'assistenza tecnica. Cristian Carini e Roberto Fornasari vantano un'esperienza di oltre 10 anni rispettivamente nei settori di assistenza per piccoli e grandi elettrodomestici.",
-  ctaPrimary: 'Parla con noi',
+    "Punto-e nasce dall'unione di molteplici professionalità nell'ambito dell'assistenza tecnica. Vantiamo un'esperienza di oltre 20 anni rispettivamente nei settori di assistenza per piccoli e grandi elettrodomestici.",
+  ctaPrimary: 'Richiedi assistenza',
   ctaSecondary: 'Scopri il servizio',
   highlights: [
     { label: 'Esperienza nel settore', value: '10+' },
@@ -58,7 +58,7 @@ export const stats = [
 ];
 
 export const aboutContent = {
-  title: "L'efficienza del servizio",
+  title: "Gli Strumenti",
   description:
     "L’efficienza del servizio viene garantita dal potenziamento delle infrastrutture della nuova sede operativa. Ogni dettaglio è stato pensato per offrire risposte rapide, ricambi immediati e un’assistenza puntuale, dal front office fino al post intervento.",
   highlights: [

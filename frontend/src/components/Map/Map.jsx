@@ -9,9 +9,7 @@ function MapSection() {
       <div className="pe-section-heading">
         <p>Dove siamo</p>
         <h2>Via Leonardo Da Vinci, 72, 29122 Piacenza PC</h2>
-        <span className="pe-map__address">
-          Via Leonardo Da Vinci, 72, 29122 Piacenza PC
-        </span>
+       
       </div>
 
       <div className="pe-map__frame">
