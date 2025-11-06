@@ -20,7 +20,7 @@ function Footer() {
         <div className="pe-footer__contacts">
           <div>
             <span>Parla con noi</span>
-            <a href="tel:0523456853">0523.456853</a>
+            <a href="tel:0523606348">0523.606348</a>
           </div>
           <div>
             <span>Email</span>
@@ -28,7 +28,7 @@ function Footer() {
           </div>
           <div>
             <span>Sede</span>
-            <p>Str. Farnesiana 91/93, 29122 Piacenza PC</p>
+            <p>Via Leonardo Da Vinci, 72, 29122 Piacenza PC</p>
           </div>
         </div>
       </div>

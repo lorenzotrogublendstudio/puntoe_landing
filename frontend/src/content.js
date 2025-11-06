@@ -196,7 +196,7 @@ export const partners = [
 export const contactChannels = [
   {
     label: 'Parla con un tecnico',
-    value: '0523.456853',
+    value: '0523.606348',
     type: 'phone'
   },
   {
@@ -206,7 +206,7 @@ export const contactChannels = [
   },
   {
     label: 'Sede operativa',
-    value: 'Str. Farnesiana 91/93, 29122 Piacenza PC',
+    value: 'Via Leonardo Da Vinci, 72, 29122 Piacenza PC',
     type: 'address'
   }
 ];

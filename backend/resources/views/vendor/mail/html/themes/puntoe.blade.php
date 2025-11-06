@@ -91,3 +91,4 @@ table.data-table th {
     font-size: 13px;
     padding: 18px;
 }
+
