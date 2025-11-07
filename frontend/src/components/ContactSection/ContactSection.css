@@ -12,7 +12,7 @@
   color: #ffffff;
   display: grid;
   gap: clamp(2rem, 5vw, 3.5rem);
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 @media (max-width: 900px) {
