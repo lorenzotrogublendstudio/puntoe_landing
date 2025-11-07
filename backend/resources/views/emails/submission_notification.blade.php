@@ -9,13 +9,14 @@
 
 {{-- Header con logo (inline dal frontend) --}}
 @slot('header')
-<div class="header">
-    <img
-        src="data:image/jpeg;base64,..."
-        alt="Punto-E"
-        width="80"
-        style="width:80px;height:auto;display:block;margin:0 auto;">
-</div>
+    <div class="header">
+        <img
+            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEA…"
+            alt="Punto-E"
+            width="80"
+            style="width:80px;height:auto;display:block;margin:0 auto;"
+        >
+    </div>
 @endslot
 
 {{-- Contenuto principale --}}
