@@ -1,6 +1,6 @@
 import useReveal from '../../hooks/useReveal';
 import './Footer.css';
-import galleryImage from '../../assets/images/puntoe_laterale_destra.jpg';
+import galleryImage from '../../assets/images/img_footer_punto_e_piacenza.png';
 function Footer() {
   const year = new Date().getFullYear();
   const [ref, isVisible] = useReveal(0.12);
