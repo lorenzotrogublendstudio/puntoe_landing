@@ -309,7 +309,7 @@
   }
 
  .pe-footer__visual img {
-    width: clamp(600px, 32vw, 360px);
+    width: clamp(900px, 32vw, 360px);
     max-height: 360px;
     display: block;
     object-fit: contain;
