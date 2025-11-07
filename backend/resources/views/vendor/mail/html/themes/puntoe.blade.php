@@ -21,7 +21,7 @@ body {
 }
 
 .header img {
-    width: 110px;
+    width: 90px;
     height: auto;
 }
 

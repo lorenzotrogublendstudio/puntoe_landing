@@ -1,4 +1,4 @@
-@component('mail::layout')
+﻿@component('mail::layout')
 
     {{-- Head: inline theme styles --}}
     @slot('head')
@@ -54,9 +54,8 @@
     {{-- Footer --}}
     @slot('footer')
         <div class="footer">
-            &copy; {{ date('Y') }} Punto-E &middot; Str. Farnesiana 91/93, Piacenza &middot;
-            <a href="tel:0523456853" style="color: inherit; text-decoration: none;">0523.456853</a>
-        </div>
+&copy; {{ date('Y') }} Punto-E &middot; Via Leonardo Da Vinci, 72, 29122 Piacenza PC &middot;
+        <a href="tel:0523606348" style="color: inherit; text-decoration: none;">0523 606348</a>        </div>
     @endslot
 @endcomponent
 
