@@ -95,14 +95,14 @@ table.data-table th {
 
 
 .panel {
-    background: #ffffff;                 /* niente più rosino */
-    border: 1px solid rgba(215,25,32,.18);
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.12); /* grigio leggero */
     border-radius: 18px;
     padding: 18px 22px;
     color: #1f2937;
-    word-break: break-word;              /* va a capo sui testi lunghi */
+    word-break: break-word;
     overflow-wrap: anywhere;
-    white-space: pre-wrap;               /* mantiene gli a capo inseriti dal cliente */
+    white-space: pre-wrap;
 }
 
 .panel p {
@@ -111,3 +111,4 @@ table.data-table th {
     overflow-wrap: inherit;
     white-space: inherit;
 }
+
