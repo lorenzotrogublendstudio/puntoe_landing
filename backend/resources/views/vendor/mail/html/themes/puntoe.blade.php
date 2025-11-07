@@ -92,3 +92,22 @@ table.data-table th {
     font-size: 13px;
     padding: 18px;
 }
+
+
+.panel {
+    background: #ffffff;                 /* niente più rosino */
+    border: 1px solid rgba(215,25,32,.18);
+    border-radius: 18px;
+    padding: 18px 22px;
+    color: #1f2937;
+    word-break: break-word;              /* va a capo sui testi lunghi */
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;               /* mantiene gli a capo inseriti dal cliente */
+}
+
+.panel p {
+    margin: 0;
+    word-break: inherit;
+    overflow-wrap: inherit;
+    white-space: inherit;
+}
