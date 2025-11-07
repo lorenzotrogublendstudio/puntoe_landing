@@ -71,9 +71,9 @@ export const aboutContent = {
 
 export const services = [
   {
-    title: 'Il Servizio',
+    title: 'Esperienza ventennale',
     description:
-      "Grazie all’esperienza decennale, Punto-e offre un servizio di assistenza tecnica completo per grandi e piccoli elettrodomestici. Attenta ai rapidi cambiamenti tecnologici, soddisfa ogni richiesta con passione e professionalità, garantendo la reperibilità immediata dei ricambi."
+      "Grazie all’esperienza ventennale, Punto-e offre un servizio di assistenza tecnica completo per grandi e piccoli elettrodomestici. Attenta ai rapidi cambiamenti tecnologici, soddisfa ogni richiesta con passione e professionalità, garantendo la reperibilità immediata dei ricambi."
   },
   {
     title: 'Assistenza grandi elettrodomestici',
@@ -203,15 +203,13 @@ export const contactChannels = [
       label: 'Orari',
       type: 'hours',
       value: [
-        'lunedì 08:30–12:30, 15–19',
-        'martedì 08:30–12:30, 15–19',
-        'mercoledì 08:30–12:30, 15–19',
-        'giovedì 08:30–12:30, 15–19',
-        'venerdì 08:30–12:30, 15–19',
-        'sabato 08:30–12:30',
-        'domenica Chiuso',
-       
-        
+        'Lunedì: 08:30–12:30 · 15:00–19:00',
+        'Martedì: 08:30–12:30 · 15:00–19:00',
+        'Mercoledì: 08:30–12:30 · 15:00–19:00',
+        'Giovedì: 08:30–12:30 · 15:00–19:00',
+        'Venerdì: 08:30–12:30 · 15:00–19:00',
+        'Sabato: 08:30–12:30',
+        'Domenica: chiuso'
       ]
     },
   {

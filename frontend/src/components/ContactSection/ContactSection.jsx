@@ -75,12 +75,20 @@ function ContactSection({ channels }) {
             {channels.map((channel) => (
               <li key={channel.label}>
                 <span>{channel.label}</span>
+
                 {channel.type === "hours" ? (
                   <div className="pe-contact__hours">
                     {channel.value.map((line) => (
                       <p key={line}>{line}</p>
                     ))}
                   </div>
+                ) : channel.type === "phone" ? (
+                  <a
+                    className="pe-contact__channel-link"
+                    href={`tel:${channel.value.replace(/[^\d+]/g, "")}`}
+                  >
+                    {channel.value}
+                  </a>
                 ) : (
                   <strong>{channel.value}</strong>
                 )}

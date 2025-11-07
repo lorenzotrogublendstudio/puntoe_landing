@@ -6,8 +6,7 @@ import photo1 from '../../assets/images/gallery/punto_e_1.jpg';
 import photo2 from '../../assets/images/gallery/punto_e_2.jpg';
 import photo3 from '../../assets/images/gallery/punto_e_3.jpg';
 import photo4 from '../../assets/images/gallery/punto_e_4.jpg';
-import photo5 from '../../assets/images/gallery/punto_e_5.jpg';
-import photo6 from '../../assets/images/gallery/punto_e_6.jpg';
+import photo6 from '../../assets/images/gallery/punto_e_6.jpg';;
 
 const slides = [
   {
@@ -29,11 +28,6 @@ const slides = [
     src: photo4,
     label: 'Interventi certificati',
     description: 'Tecnici specializzati su grandi elettrodomestici'
-  },
-  {
-    src: photo5,
-    label: 'Magazzino organizzato',
-    description: 'Oltre 200 mq dedicati alla logistica ricambi'
   },
   {
     src: photo6,

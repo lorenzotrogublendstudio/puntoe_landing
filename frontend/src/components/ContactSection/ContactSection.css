@@ -200,3 +200,16 @@
     min-height: 320px;
   }
 }
+
+.pe-contact__channel-link {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.pe-contact__channel-link:hover,
+.pe-contact__channel-link:focus-visible {
+  text-decoration: underline;
+}
