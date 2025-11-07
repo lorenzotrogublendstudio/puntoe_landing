@@ -289,3 +289,33 @@
     width: clamp(110px, 28vw, 160px);
   }
 }
+
+/* === Desktop-only visual (single image) ============================= */
+.pe-footer__visual {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .pe-footer__content {
+    grid-template-columns: minmax(0, auto) minmax(0, 1.5fr);
+    align-items: stretch;
+  }
+
+  .pe-footer__visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .pe-footer__visual img {
+    width: clamp(140px, 20vw, 240px);
+    max-height: 320px;
+    display: block;
+    object-fit: contain;
+  }
+
+  .pe-footer__contacts {
+    align-self: stretch;
+  }
+}
