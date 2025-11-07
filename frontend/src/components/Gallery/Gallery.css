@@ -61,7 +61,7 @@
   pointer-events: all;
   margin: 0 clamp(1rem, 4vw, 2.5rem);
   position: relative;
-  top: calc(50% - 4rem);
+  top: calc(40% - 4rem);
   width: clamp(48px, 9vw, 68px);
   height: clamp(48px, 9vw, 68px);
   border-radius: 50%;
@@ -354,6 +354,7 @@
   }
 }
 
+
 /* Controlli frecce spostati in alto */
 .pe-gallery-slider__controls {
   position: absolute;
@@ -384,6 +385,7 @@
   transition: transform 0.18s ease, background 0.18s ease, border 0.18s ease;
 }
 
+
 .pe-gallery-slider__arrow:hover,
 .pe-gallery-slider__arrow:focus-visible {
   transform: scale(1.12);
@@ -396,18 +398,7 @@
   transform: scale(0.92);
 }
 
-.pe-gallery-slider__controls {
-  position: absolute;
-  top: -12px;                  /* frecce un filo sopra l’immagine */
-  left: 0;
-  right: 0;
-  padding: clamp(0.75rem, 3vw, 1.5rem) clamp(1rem, 4vw, 2.5rem);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  pointer-events: none;
-  z-index: 3;
-}
+
 
 .pe-gallery-slider__arrow {
   pointer-events: all;
@@ -423,4 +414,32 @@
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   cursor: pointer;
   transition: transform 0.18s ease, background 0.18s ease, border 0.18s ease;
+}
+
+/* Laptop 14" (1366x768): frecce più basse e spostate all’esterno */
+@media screen and (min-width: 1200px) and (max-width: 1450px) {
+  .pe-gallery-slider__controls {
+    top: 0 !important;
+    bottom: 0 !important;
+    transform: none !important;
+    padding: 0 !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .pe-gallery-slider__arrow {
+    pointer-events: all !important;
+    margin: 0 clamp(1rem, 4vw, 2.5rem) !important;
+    position: relative !important;
+    top: calc(40% - 4rem) !important;
+    width: clamp(48px, 9vw, 68px) !important;
+    height: clamp(48px, 9vw, 68px) !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    color: #fff !important;
+    font-size: clamp(1.8rem, 3vw, 2.4rem) !important;
+    cursor: pointer !important;
+    transition: transform 0.18s ease, background 0.18s ease, border 0.18s ease !important;
+  }
 }

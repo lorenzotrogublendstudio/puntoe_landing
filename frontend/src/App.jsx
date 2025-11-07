@@ -1,5 +1,5 @@
 import Header from './components/header/header';
-import Hero from './components/Hero/Hero';
+import Hero from './components/Hero/hero.jsx';
 import StatsStrip from './components/StatsStrip/StatsStrip';
 import About from './components/About/About';
 import Services from './components/Services/Services';
