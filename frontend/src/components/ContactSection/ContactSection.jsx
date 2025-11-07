@@ -57,26 +57,42 @@ function ContactSection({ channels }) {
     <section
       id="contatti"
       ref={ref}
-      className={`pe-contact pe-animate ${isVisible ? 'is-visible' : ''}`}
+      className={`pe-contact pe-animate ${isVisible ? "is-visible" : ""}`}
     >
       <div className="pe-contact__layout">
-        <div className="pe-contact__intro pe-animate-child" style={{ transitionDelay: '0.12s' }}>
+        <div
+          className="pe-contact__intro pe-animate-child"
+          style={{ transitionDelay: "0.12s" }}
+        >
           <p className="pe-contact__eyebrow">Pronti ad ascoltarti</p>
-          <h2 className="pe-contact__headline">Contatta il nostro servizio di assistenza!</h2>
+          <h2 className="pe-contact__headline">
+            Contatta il nostro servizio di assistenza!
+          </h2>
           <p className="pe-contact__copy">
             Prenderemo in carico la tua richiesta nel più breve tempo possibile.
           </p>
           <ul className="pe-contact__channels">
             {channels.map((channel) => (
-              <li key={channel.value}>
+              <li key={channel.label}>
                 <span>{channel.label}</span>
-                <strong>{channel.value}</strong>
+                {channel.type === "hours" ? (
+                  <div className="pe-contact__hours">
+                    {channel.value.map((line) => (
+                      <p key={line}>{line}</p>
+                    ))}
+                  </div>
+                ) : (
+                  <strong>{channel.value}</strong>
+                )}
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="pe-contact__form-wrapper pe-animate-child" style={{ transitionDelay: '0.24s' }}>
+        <div
+          className="pe-contact__form-wrapper pe-animate-child"
+          style={{ transitionDelay: "0.24s" }}
+        >
           <form className="pe-contact__form" onSubmit={handleSubmit} noValidate>
             <div className="pe-contact__row">
               <label>
@@ -138,8 +154,10 @@ function ContactSection({ channels }) {
               />
             </label>
 
-            {status.type !== 'idle' && (
-              <div className={`pe-contact__alert pe-contact__alert--${status.type}`}>
+            {status.type !== "idle" && (
+              <div
+                className={`pe-contact__alert pe-contact__alert--${status.type}`}
+              >
                 {status.message}
               </div>
             )}
@@ -147,9 +165,11 @@ function ContactSection({ channels }) {
             <button
               type="submit"
               className="pe-btn pe-btn--primary pe-contact__submit"
-              disabled={status.type === 'loading'}
+              disabled={status.type === "loading"}
             >
-              {status.type === 'loading' ? 'Invio in corso…' : 'Invia richiesta'}
+              {status.type === "loading"
+                ? "Invio in corso…"
+                : "Invia richiesta"}
             </button>
           </form>
         </div>

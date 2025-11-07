@@ -4,7 +4,7 @@
 }
 
 .pe-contact__layout {
-  max-width: 1150px;
+  max-width: 1700px;
   margin: 0 auto;
   background: linear-gradient(140deg, #d71920 0%, #b31219 100%);
   border-radius: 32px;
@@ -162,3 +162,41 @@
 }
 
 
+/* Laptop 13"-14": more room for the form */
+@media (max-width: 1440px) and (min-width: 901px) {
+  .pe-contact__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr);
+    gap: clamp(1.6rem, 3.2vw, 2.4rem);
+  }
+
+  .pe-contact__form-wrapper {
+    padding: clamp(2rem, 4vw, 2.8rem);
+  }
+}
+
+
+.pe-contact__hours {
+  margin-top: 0.4rem;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.pe-contact__hours p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+
+.pe-contact__textarea textarea {
+  resize: vertical;
+  min-height: clamp(350px, 28vh, 320px); /* prima era 140px */
+}
+
+/* Laptop ~14": riempi la colonna del form */
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .pe-contact__textarea textarea {
+    min-height: 320px;
+  }
+}

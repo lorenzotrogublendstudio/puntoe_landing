@@ -51,6 +51,8 @@
 }
 
 
+
+
 /* Desktop: 3 servizi per riga */
 @media (min-width: 1024px) {
   .services-grid {
@@ -111,5 +113,34 @@
     height: 100% !important;
     display: flex !important;
     flex-direction: column !important;
+  }
+}
+
+
+/* Mobile: card impilate 1x1 */
+@media (max-width: 599px) {
+  .pe-services__list {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: clamp(1rem, 4vw, 1.4rem) !important;
+  }
+
+  .pe-services__item {
+    width: 100% !important;
+  }
+}
+
+/* Mobile: 6 rows × 1 column */
+@media (max-width: 640px) {
+  .pe-services__grid {
+    display: grid !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+    gap: clamp(1rem, 4vw, 1.6rem) !important;
+  }
+
+  .pe-services__card {
+    width: 100% !important;
+    max-width: none !important;
   }
 }

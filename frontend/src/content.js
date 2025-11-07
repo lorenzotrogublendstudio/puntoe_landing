@@ -200,10 +200,20 @@ export const contactChannels = [
     type: 'phone'
   },
   {
-    label: 'Scrivici',
-    value: 'info@punto-e.eu',
-    type: 'email'
-  },
+      label: 'Orari',
+      type: 'hours',
+      value: [
+        'lunedì 08:30–12:30, 15–19',
+        'martedì 08:30–12:30, 15–19',
+        'mercoledì 08:30–12:30, 15–19',
+        'giovedì 08:30–12:30, 15–19',
+        'venerdì 08:30–12:30, 15–19',
+        'sabato 08:30–12:30',
+        'domenica Chiuso',
+       
+        
+      ]
+    },
   {
     label: 'Sede operativa',
     value: 'Via Leonardo Da Vinci, 72, 29122 Piacenza PC',
