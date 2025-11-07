@@ -32,7 +32,8 @@ function Hero({ content }) {
         <div className="pe-hero__copy pe-animate-child" style={{ transitionDelay: '0.1s' }}>
           <h1>{content.title}</h1>
           <p className="pe-hero__description">{content.description}</p>
-          <div className="pe-hero__actions">
+
+          <div className="pe-hero__actions-grid" role="group" aria-label="Azioni principali">
             <a className="pe-btn pe-btn--primary" href="#contatti">
               {content.ctaPrimary}
             </a>
