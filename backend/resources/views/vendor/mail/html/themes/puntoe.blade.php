@@ -21,7 +21,8 @@ body {
 }
 
 .header img {
-    width: 140px;
+    width: 110px;
+    height: auto;
 }
 
 .content-cell {
@@ -91,4 +92,3 @@ table.data-table th {
     font-size: 13px;
     padding: 18px;
 }
-
