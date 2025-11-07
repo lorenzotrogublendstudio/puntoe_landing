@@ -308,9 +308,9 @@
     height: 100%;
   }
 
-  .pe-footer__visual img {
-    width: clamp(140px, 20vw, 240px);
-    max-height: 320px;
+ .pe-footer__visual img {
+    width: clamp(600px, 32vw, 360px);
+    max-height: 360px;
     display: block;
     object-fit: contain;
   }
