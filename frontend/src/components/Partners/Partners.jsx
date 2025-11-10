@@ -109,17 +109,29 @@ function Partners({ items }) {
 
         {totalSlides > 1 && (
           <div className="pe-partners__pagination" role="tablist" aria-label="Navigazione partner">
-            {slides.map((_, index) => (
-              <button
-                key={`dot-${index}`}
-                type="button"
-                role="tab"
-                aria-label={`Mostra slide ${index + 1}`}
-                aria-selected={index === currentSlide}
-                className={`pe-partners__dot ${index === currentSlide ? 'is-active' : ''}`}
-                onClick={() => goToSlide(index)}
-              />
-            ))}
+            {(() => {
+              const MAX_DOTS = 3;
+              const visibleCount = Math.min(MAX_DOTS, totalSlides);
+              const windowStart =
+                totalSlides <= MAX_DOTS
+                  ? 0
+                  : Math.max(0, Math.min(currentSlide - 1, totalSlides - MAX_DOTS));
+
+              return Array.from({ length: visibleCount }, (_, offset) => {
+                const index = windowStart + offset;
+                return (
+                  <button
+                    key={`dot-${index}`}
+                    type="button"
+                    role="tab"
+                    aria-label={`Mostra slide ${index + 1}`}
+                    aria-selected={index === currentSlide}
+                    className={`pe-partners__dot ${index === currentSlide ? 'is-active' : ''}`}
+                    onClick={() => goToSlide(index)}
+                  />
+                );
+              });
+            })()}
           </div>
         )}
       </div>
