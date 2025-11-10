@@ -1,7 +1,7 @@
-import { useRef, useState } from 'react';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import { useEffect, useMemo, useState } from 'react';
 import useReveal from '../../hooks/useReveal';
 import './Partners.css';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 function PartnerLogo({ partner, delay }) {
   const [failed, setFailed] = useState(false);
@@ -30,29 +30,34 @@ function PartnerLogo({ partner, delay }) {
 
 function Partners({ items }) {
   const [ref, isVisible] = useReveal(0.2);
-  const sliderRef = useRef(null);
-  const isMobile = useMediaQuery('(max-width: 768px)');  const isTablet = useMediaQuery('(max-width: 1024px)');  const isPortrait = useMediaQuery('(orientation: portrait)');
+  const isMobile = useMediaQuery('(max-width: 640px)');
 
-  const handleScroll = (direction) => {
-    if (!sliderRef.current) return;
-    const track = sliderRef.current;    if (!track) return;    
-    const cards = Array.from(track.children || []);    if (!cards.length) return;    
-    const viewportCenter = track.scrollLeft + track.clientWidth / 2;    let currentIndex = 0;    
-    let minDist = Infinity;    cards.forEach((el, i) => {      const center = el.offsetLeft + el.clientWidth / 2;      
-      const dist = Math.abs(center - viewportCenter);      
-      if (dist < minDist) {        
-        minDist = dist;        
-        currentIndex = i;      
-      }    
-    });    
-    const delta = (isMobile || (isTablet && isPortrait)) ? 1 : isTablet ? 2 : 3;    
-    let targetIndex = currentIndex + delta * direction;    
-    if (targetIndex < 0) targetIndex = 0;
-    if (targetIndex > cards.length - 1) targetIndex = cards.length - 1;
-    const target = cards[targetIndex];
-    const targetLeft = target.offsetLeft - (track.clientWidth - target.clientWidth) / 2;
-    track.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+  const slides = useMemo(() => {
+    const chunkSize = isMobile ? 1 : 2;
+    const result = [];
+    for (let index = 0; index < items.length; index += chunkSize) {
+      result.push(items.slice(index, index + chunkSize));
+    }
+    return result;
+  }, [items, isMobile]);
+
+  const totalSlides = slides.length;
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    setCurrentSlide((prev) => {
+      if (!totalSlides) return 0;
+      return Math.min(prev, totalSlides - 1);
+    });
+  }, [totalSlides]);
+
+  const goToSlide = (nextIndex) => {
+    if (!totalSlides) return;
+    setCurrentSlide((nextIndex + totalSlides) % totalSlides);
   };
+
+  const handlePrev = () => goToSlide(currentSlide - 1);
+  const handleNext = () => goToSlide(currentSlide + 1);
 
   return (
     <section
@@ -67,27 +72,56 @@ function Partners({ items }) {
           <button
             type="button"
             className="pe-partners__arrow pe-partners__arrow--prev"
-            onClick={() => handleScroll(-1)}
+            onClick={handlePrev}
             aria-label="Loghi precedenti"
           >
             ‹
           </button>
 
-          <div className="pe-partners__track" ref={sliderRef}>
-            {items.map((partner, index) => (
-              <PartnerLogo key={partner.name} partner={partner} delay={0.12 * (index + 1)} />
-            ))}
+          <div className="pe-partners__viewport" aria-live="polite">
+            <div
+              className="pe-partners__slides"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((group, slideIndex) => (
+                <div className="pe-partners__slide" key={`partners-slide-${slideIndex}`}>
+                  {group.map((partner, index) => (
+                    <PartnerLogo
+                      key={`${partner.name}-${index}`}
+                      partner={partner}
+                      delay={0.12 * (slideIndex * 2 + index + 1)}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
 
           <button
             type="button"
             className="pe-partners__arrow pe-partners__arrow--next"
-            onClick={() => handleScroll(1)}
+            onClick={handleNext}
             aria-label="Loghi successivi"
           >
             ›
           </button>
         </div>
+
+        {totalSlides > 1 && (
+          <div className="pe-partners__pagination" role="tablist" aria-label="Navigazione partner">
+            {slides.map((_, index) => (
+              <button
+                key={`dot-${index}`}
+                type="button"
+                role="tab"
+                aria-label={`Mostra slide ${index + 1}`}
+                aria-selected={index === currentSlide}
+                className={`pe-partners__dot ${index === currentSlide ? 'is-active' : ''}`}
+                onClick={() => goToSlide(index)}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
