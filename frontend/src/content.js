@@ -70,10 +70,10 @@ export const aboutContent = {
 };
 
 export const services = [
-  {
-    title: 'Esperienza ventennale',
+   {
+    title: 'Assistenza a domicilio',
     description:
-      "Grazie all’esperienza ventennale, Punto-e offre un servizio di assistenza tecnica completo per grandi e piccoli elettrodomestici. Attenta ai rapidi cambiamenti tecnologici, soddisfa ogni richiesta con passione e professionalità, garantendo la reperibilità immediata dei ricambi."
+      'Due furgoni attrezzati per interventi rapidi direttamente presso abitazioni o sedi aziendali, con pianificazione flessibile.'
   },
   {
     title: 'Assistenza grandi elettrodomestici',
@@ -96,10 +96,11 @@ export const services = [
       'Ampia disponibilità di ricambi in pronta consegna con gestione ordini su richiesta e supporto dedicato.'
   },
   {
-    title: 'Assistenza a domicilio',
+    title: 'Esperienza ventennale',
     description:
-      'Due furgoni attrezzati per interventi rapidi direttamente presso abitazioni o sedi aziendali, con pianificazione flessibile.'
+      "Grazie all’esperienza ventennale, Punto-e offre un servizio di assistenza tecnica completo per grandi e piccoli elettrodomestici. Attenta ai rapidi cambiamenti tecnologici, soddisfa ogni richiesta con passione e professionalità, garantendo la reperibilità immediata dei ricambi."
   }
+ 
 ];
 
 export const processSteps = [
