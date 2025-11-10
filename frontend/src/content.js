@@ -98,7 +98,7 @@ export const services = [
   {
     title: 'Esperienza ventennale',
     description:
-      "Grazie all’esperienza ventennale, Punto-e offre un servizio di assistenza tecnica completo per grandi e piccoli elettrodomestici. Attenta ai rapidi cambiamenti tecnologici, soddisfa ogni richiesta con passione e professionalità, garantendo la reperibilità immediata dei ricambi."
+      "Grazie all’esperienza ventennale, Punto-e offre un servizio di assistenza tecnica completo per grandi e piccoli elettrodomestici."
   }
  
 ];
